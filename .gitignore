@@ -1,0 +1,25 @@
+# Ignore save files
+*.save
+saves/
+persistent
+
+# Ignore log files
+errors.txt
+log.txt
+traceback.txt
+
+# Ignore editor-specific dirctories
+.vscode/
+
+# Ignore Ren'Py SDK files
+.renpy-*
+
+# Ignore compiled and cache files
+*.rpyc
+*.rpymc
+*.rpyb
+
+# Ignore bytecode and Python cache
+*.pyc
+__pycache__/
+
