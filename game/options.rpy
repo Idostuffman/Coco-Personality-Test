@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Coco Personality Test")
+define config.name = _("The Little Coco Game")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -36,7 +36,7 @@ define gui.about = _p("Coded by Idostuff \n Art by Studio Massa")
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "CocoPersonalityTest"
+define build.name = "The-Little-Coco-Game"
 
 
 ## Sounds and music ############################################################
