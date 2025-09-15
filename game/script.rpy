@@ -1,4 +1,5 @@
-﻿define coco = Character("Coco", color="#FFD9AD")
+﻿define player_name = "Player"
+define coco = Character("Coco", color="#FFD9AD")
 image bedroom_night = "bg room.png"
 image card = "time.png"
 image coco = Movie(play="images/Coco.webm")
@@ -11,12 +12,36 @@ image uramonster = im.Scale("your a monster.png", 1920, 1080)
 define THIS_PATH = '00-chess-engine/'
 
 init python:
+    import random
+
+init python:
     # for importing libraries
     import_dir = os.path.join(renpy.config.gamedir, THIS_PATH, 'python-packages')
     # to prevent STOCKFISH_ENGINE from getting stored and pickled
     global_objects = {}
 
 label start:
+    $ poems = [
+        {
+            "intro": ["This one is about love.", "It's a classic!"], 
+            "text": ["Roses are red,", "Violets are blue,", "Sugar is sweet,", "And so are you."]
+        },
+        {
+            "intro": ["This one's good! I don't know who wrote it, sadly...", "I found this in front of my door after band practice, crumpled on the ground. Who would throw away such a beautiful piece of poetry?"], 
+            "text": ["Is there a land where joy runs free,\nWhere I can find peace and my destiny,\nA place where my dreams can come alive,\nWhere happiness helps my soul survive?", "Whenever I’m left alone in the night,\nWhen birds and flowers lose their light,\nI dream of a sky where the Sun won’t fade,\nIts golden rays in glory displayed."]
+        },
+        {
+            "intro": ["This one is from Zoey, she loves her silly love songs.", "Cleo rejected it, but I quite liked it!"], 
+            "text": ["I was still studying, he was working late,\nAt night I read the works of Shakespeare’s fate.\nSometimes he'd wonder at my strange rhymes,\nBut he never let me worry, no matter the times.", "He had stronger arms than I could claim,\nHe had stronger arms than I could tame.\nHe always let me take control,\nHe let me win his soul."]
+        },
+        {
+            "intro": ["This one was made by Cleo!", "She kind of wants to push our sound in a new direction."], 
+            "text": ["Pay attention to the last thing,\nKeep me within you, let it cling.\nI feel like I'm wandering through terraces of mind,\nSomething in me is divided, hard to find.", "I love you, I love your dreams to guess,\nAnd I don't know why it causes you distress.\nDon't worry about it, let it be,\nDon't worry about it, set your mind free."]
+        },
+    ]     
+    # Shuffle the list to randomize the order
+    $ random.shuffle(poems)   
+
     play music "Coco.mp3"
     $ score = 0
     scene coco with fade
@@ -79,8 +104,6 @@ label start:
     elif player_name.lower() == "studio massa":
         scene cconfused
         coco "God?"        
-    elif player_name.lower() == "foenkie":
-        jump pedo
     elif player_name.lower() == "hitler":
         jump pedo
     elif player_name.lower() == "peeb":
@@ -117,18 +140,119 @@ label start:
     elif player_name.lower() == "isko":
         scene chappy
         coco "Oh, you must be the new exchange student, zrdavo! You are also the head of the motorsport club at our school, right?"
+    elif player_name.lower() == "hefty":
+        scene chappy
+        coco "Hoi Hefty! Hoe gaat het met je?"        
+    elif player_name.lower() == "ilse":
+        scene chappy
+        coco "Hi Ilse, how are you doing? By the way, Maya birthday is coming up soon, can you help me bake a cake for her?"
     elif player_name.lower() == "kill yourself":
         jump kys
     elif player_name.lower() == "kys":
         jump kys
     elif player_name.lower() == "nigger":
         $ renpy.quit()
+    elif player_name.lower() == "nigga":
+        $ renpy.quit()
+    elif player_name.lower() == "cum":
+        $ renpy.quit()
+    elif player_name.lower() == "sex":
+        $ renpy.quit()
+    elif player_name.lower() == "masturbation":
+        $ renpy.quit()
+    elif player_name.lower() == "edge":
+        $ renpy.quit()
+    elif player_name.lower() == "edging":
+        $ renpy.quit()
+    elif player_name.lower() == "fuck":
+        $ renpy.quit()
+    elif player_name.lower() == "masturbate":
+        $ renpy.quit()
+    elif player_name.lower() == "kaffir boetie":
+        $ renpy.quit()
+    elif player_name.lower() == "kaffir":
+        $ renpy.quit()
+    elif player_name.lower() == "kaffer":
+        $ renpy.quit()
+    elif player_name.lower() == "kafir":
+        $ renpy.quit()
+    elif player_name.lower() == "kaffre":
+        $ renpy.quit()
+    elif player_name.lower() == "kuffar":
+        $ renpy.quit()
+    elif player_name.lower() == "nazis":
+        $ renpy.quit()
+    elif player_name.lower() == "faggot":
+        $ renpy.quit()
+    elif player_name.lower() == "fag":
+        $ renpy.quit()
+    elif player_name.lower() == "tranny":
+        $ renpy.quit()
+    elif player_name.lower() == "shemale":
+        $ renpy.quit()
+    elif player_name.lower() == "rape":
+        $ renpy.quit()
+    elif player_name.lower() == "raping":
+        $ renpy.quit()
+    elif player_name.lower() == "rapist":
+        $ renpy.quit()
+    elif player_name.lower() == "kill yourself":
+        jump kys
+    elif player_name.lower() == "kys":
+        jump kys
+    elif player_name.lower() == "gas the jews":
+        $ renpy.quit()
+    elif player_name.lower() == "hitler did nothing wrong":
+        $ renpy.quit()
+    elif player_name.lower() == "nazi":
+        $ renpy.quit()
+    elif player_name.lower() == "white power":
+        $ renpy.quit()
+    elif player_name.lower() == "heil hitler":
+        $ renpy.quit()
+    elif player_name.lower() == "pedophile":
+        $ renpy.quit()
+    elif player_name.lower() == "child porn":
+        $ renpy.quit()
+    elif player_name.lower() == "cp":
+        $ renpy.quit()
+    elif player_name.lower() == "incest":
+        $ renpy.quit()
+    elif player_name.lower() == "bestiality":
+        $ renpy.quit()
+    elif player_name.lower() == "zoophilia":
+        $ renpy.quit()
+    elif player_name.lower() == "genocide":
+        $ renpy.quit()
+    elif player_name.lower() == "ethnic cleansing":
+        $ renpy.quit()
+    elif player_name.lower() == "bomb":
+        $ renpy.quit()
+    elif player_name.lower() == "terrorist":
+        $ renpy.quit()
+    elif player_name.lower() == "jihad":
+        $ renpy.quit()
+    elif player_name.lower() == "muslim ban":
+        $ renpy.quit()
+    elif player_name.lower() == "sharia law":
+        $ renpy.quit()
+    elif player_name.lower() == "infidel":
+        $ renpy.quit()
+    elif player_name.lower() == "chink":
+        $ renpy.quit()
+    elif player_name.lower() == "gook":
+        $ renpy.quit()
+    elif player_name.lower() == "fuck you":
+        jump kys1
+    elif player_name.lower() == "die":
+        jump kys
+    elif player_name.lower() == "sand nigger":
+        $ renpy.quit()
     else:
         coco "Oh, hoi [player_name]!"
     jump menu
 
 label menu:
-
     scene coco with dissolve
     coco "What do you want to do [player_name]?"
 
@@ -139,16 +263,35 @@ label menu:
             call tell_me_a_story
         "I wanna play a game!":
             call mini_games
-
+        "Can you read me something?":
+            if poems:
+                coco "Of course! Let me get my poem folder real quick!"
+                # Get the next poem and remove it from the list
+                $ current_poem = poems.pop(0)
+                
+                # Coco says the intro lines
+                python:
+                    for line in current_poem["intro"]:
+                        renpy.say(coco, line)
+                
+                # Coco reads the poem line by line
+                python:
+                    for line in current_poem["text"]:
+                        renpy.say(coco, line)
+                jump menu
+            else:
+                coco "I don't have any more poems, sorry."
+                jump menu
 label mini_games:
     scene cconfused
-    coco "Oh, the Club Room has a lot of games, but sadly, it's locked at the moment. Sorry..."
+    coco "Oh, the Club Room has a lot of games! But I do not have any here sadly."
+    #menu:    
+    #    "Yeah, why not.":
+    #       pass  # Let the user try again
+    #    "Nah, forget it.":
     jump menu
-#menu:    
-            #"Yeah, why not.":
-                #pass  # Let the user try again
-            #"Nah, forget it.":
-#jump chess_game
+
+    #jump chess_game
 
 
 label personality_test1:
@@ -162,10 +305,10 @@ label personality_test1:
             $ config.skipping = False  # Disable skipping
             scene chappy
             pause 9999
+            $ renpy.quit()
             return
 
 label personality_test:
-    
     scene coco with dissolve
     coco "Ok, let's start with the first question, ready?"
     coco "What's your favourite Colour?"
@@ -220,7 +363,7 @@ label personality_test:
     scene coco with dissolve    
     coco "What is your favourite genre?"
     menu:
-        "Action/Adventure":
+        "Action":
             $ score += 2
             scene chappy
             coco "Not my thing, but I can see the appeal!"
@@ -299,6 +442,10 @@ label tell_me_a_story:
         "fav sister": "Maya, but don't tell Mymy, ok?",
         "dead parents": "jump kys1",
         "no parents": "jump kys",  
+        "hobby": "I love playing the drums! It's my way of expressing myself.",
+        "hobbies": "I love playing the drums! It's my way of expressing myself.",
+        "favorite color": "Yellow! It's so bright and cheerful, don't you think?",
+        "do you play any": "I play the drums! It's very fun!",
         "kill yourself": "jump kys1",   
         "favorite sister": "Maya, but don't tell Mymy, ok?",
         "opinion about mymy": "I like her, altough she can be a handful.",
@@ -312,16 +459,30 @@ label tell_me_a_story:
         "i like you": "I like you too! Platonically, of course!",
         "how are you doing" : "I'm doing quite good! Thanks for asking, I hope you're doing alright too!",   
         "doing alright" : "Glad to hear that!",
+        "my favourite band" : "Oh nice! I'll check them out.",
+        "my favourite bands" : "Oh nice! I'll check them out.",
         "doing good" : "Glad to hear that!",
+        "I'm ok" : "Glad to hear that!",
+        "I'm fine" : "Glad to hear that!",
+        "I'm alright" : "Glad to hear that!",
+        "I'm doing" : "Glad to hear that!",
         "I'm good" : "Glad to hear that!",
         "going bad" : "Oh sorry to hear that, do you want to talk about it?",   
+        "going good" : "Glad to hear that!",
+        "going alright" : "Glad to hear that!",
+        "going fine" : "Glad to hear that!",
+        "going ok" : "Glad to hear that!",
+        "how's it going" : "Glad to hear that!",
+        "how is it going" : "Glad to hear that!",
+        "how are you" : "I'm doing quite good! Thanks for asking, I hope you're doing alright too!" ,
+        "how are you doing" : "I'm doing quite good! Thanks for asking, I hope you're doing alright too!" ,
         "it's going" : "Glad to hear that!",
-        "are you doing" : "I'm took quite good! Thanks for asking, I hope you're doing alright too!" , 
-        "it going" : "I'm took quite good! Thanks for asking, I hope you're doing alright too!" , 
+        "are you doing" : "I'm doing quite good! Thanks for asking, I hope you're doing alright too!" , 
+        "it going" : "I'm doing quite good! Thanks for asking, I hope you're doing alright too!" , 
         "it's going" : "Glad to hear that!",
         "school life" : "It's alright, nothing stressful.",
         "like school" : "I like it!",
-        "your relegion" : "I'm not a religous Person, so I'm sorry, can't talk about that.",
+        "your religion" : "I'm not a religous Person, so I'm sorry, can't talk about that.",
         "be my wife" : "Ehm...No?",
         "are you from" : "South Africa!",
         "japan" : "Oh Japan! Mymy hates that place, I don't know why, but she always bad mouths everything about it.",
@@ -330,14 +491,105 @@ label tell_me_a_story:
         "call me a good boy" : "I'm not comfortable with that, sorry.",
         "call me a good girl" : "I'm not comfortable with that, sorry.",
         "peeb" : "Sounds cute, what is that?",
+        "peebs" : "Sounds cute, what is that?",
+        "peebs is" : "Oh interesting!",
         "peeb is" : "Oh interesting!",
+        "peebs are" : "Oh interesting!",
+        "peeb are" : "Oh interesting!",
+        "peeb is a" : "Oh interesting!",
+        "peebs are a" : "Oh interesting!",
+        "peeb is the" : "Oh interesting!",
+        "peebs are the" : "Oh interesting!",
         "lud zbunjen normalan" : "Sta ti bi?",
-        "relegion" : "I'm not a religous Person, so I'm sorry, can't talk about that.",
+        "religion" : "I'm not a religous Person, so I'm sorry, can't talk about that.",
         "believe in god" : "I'm not a religous Person, so I'm sorry, can't talk about that.",
         "christianity" : "I'm not a religous Person, so I'm sorry, can't talk about that.",
         "islam" : "I'm not a religous Person, so I'm sorry, can't talk about that.",
         "coco" : "That's me!",
-        "about yourself" : "My name is Coco, I play the Drums, I love Rugby and listening to muisc."
+        "what's your name" : "Coco! Nice to meet you!",
+        "your name" : "Coco! Nice to meet you!",
+        "what's my name" : "How did you forget that silly?",
+        "whats my name" : "How did you forget that silly?",   
+        "my name" : "How did you forget that silly?",     
+        "who are you" : "I'm Coco! Nice to meet you!",
+        "who is coco" : "That's me!",
+        "who is mymy" : "That's my sister! She's a bit chaotic, but I love her.",
+        "who is maya" : "That's my sister! She's a bit shy, but I love her.",
+        "about yourself" : "My name is Coco, I play the Drums, I love Rugby and listening to music.",
+        "rugby": "Oh, Rugby! My biggest passion! I love the adrenaline, the strategy, the teamwork... it's everything to me!",  
+        "drums": "Drumming is like my heartbeat, you know? I can't imagine a day without playing.",  
+        "favourite food": "Oh, that's a tough one... but if I had to choose, probably bobotie. Have you ever tried it?",  
+        "video games": "I like them! Though I don’t play that often. Maya is way more into them than I am.",  
+        "dreams": "I sometimes dream of South Africa... of running through the fields, feeling free.",  
+        "fears": "Thunder... I really don't like it. Can we change the subject?",  
+        "birthday": "Oh, trying to plan something special for me? Well, it's a secret!",  
+        "funny story": "Once, Mymy dared me to eat a spoonful of cinnamon... I regret that.",  
+        "favorite color": "Yellow! It's so bright and cheerful, don't you think?",
+        "favorite animal": "I love gazelles! They're so graceful and elegant.",  
+        "cats or dogs": "Dogs, definitely! They're always so happy and energetic! I'm not that fond of cats...",  
+        "childhood": "It was...complicated. But let's not dwell on that.",  
+        "superpower": "If I could have any power? Probably super speed! I'd be unstoppable on the rugby field.",   
+        "biggest regret": "There are things I wish I could change, but dwelling on the past won't fix them.",  
+        "future": "I don't know what the future holds, but I'll keep running forward.",  
+        "secrets": "If I told you, they wouldn’t be secrets anymore, would they?",  
+        "best memory": "Probably the times Maya, Mymy and me played together as children. We laughed so much back then.",  
+        "worst memory": "Can we not talk about that?",  
+        "mymy opinion": "She's wild, chaotic, and sometimes a headache, but I wouldn't trade her for the world.",  
+        "maya opinion": "Maya's very lovely, I just wish she'd talk more.",  
+        "joke": "Okay, okay, I've got one! Why did the drummer break up with their metronome? ...Because it was too controlling!",  
+        "favorite season": "Spring! Everything is blooming and alive, just like me!",
+        "favorite hobby": "I love playing the drums! It's my way of expressing myself.",
+        "favorite sport": "Rugby! The thrill, the teamwork... it's everything to me!",
+        "favorite book": "I love reading! But I don't have a favorite book, I just read whatever I can get my hands on.",
+        "favorite anime": "I don't really watch anime, but I know Maya loves it! I think she likes \"Bukunu Senpei\"? Or something like that.",
+        "music taste": "I love all kinds of music, but rock has my heart!",  
+        "favorite band": "I love so many! But I guess I have a soft spot for a lot of 70s Prog Bands, their music is timeless!",
+        "favorite song": "I love \"21st Century Schizoid Man\" by King Crimson! It's a classic! But I also love some local Bands here.",
+        "favorite instrument": "The drums, of course! But I respect all instruments...except maybe the recorder.",
+        "maya hates me": "I don’t think she hates you! Maya just...has a funny way of showing affection sometimes.",
+        "mymy hates me": "Mymy? Hate someone? I doubt it! She’s just a bit...overwhelming at times.",
+        "favorite movie": "I love Adam Sandler movies! The comedy, Sandler himself... it’s like a rollercoaster ride!",
+        "coffee or tea": "Tee, hands down. Coffee is fine, but tea kinda keeps me alive!",  
+        "favorite place": "There was this hill over looking a field back home... I used to sit there for hours, just watching the world.",
+        "bobotie": "Oh, bobotie! My absolute favorite food! It’s like a warm hug from home—spiced, sweet, and just perfect.",
+        "springbok": "Springboks! Majestic creatures, fast and strong. Plus, they’re great at rugby. Coincidence? I think not.",
+        "rugby world cup": "Oh, the Rugby World Cup! It’s like a festival of strength and strategy. I love watching the games!",
+        "epke": "Epke? Don't know them sorry.",
+        "adoptive parents": "Soei and Ravi... They’re great, really. I don’t always know what to say to them, but they try and I love them for that.",
+        "new parents": "I guess that’s what Soei and Ravi are now. It’s... different, but not bad. I love them.",
+        "parents": "If you mean my birth parents... let’s not talk about that, okay?",
+        "soei": "Soei is patient. Which is good, considering we’re not the easiest bunch to handle.",
+        "ravi": "Ravi’s cool! He tries to understand us, even if we’re a bit much sometimes.",
+        "noga": "Oh... that. I didn’t mean to take it from Maya, I swear! It's just...whatever...sorry.",
+        "eiko": "Who’s that? Should I know them?",
+        "eiko is mymy's": "jump no",  
+        "eiko is mymys": "jump no",                 
+        "anime": "I think anime is fun! Maya really likes it, but Mymy...not so much. She always complains about it.",
+        "manga": "I think manga is fun! Maya really likes it, but Mymy...not so much. She always complains about it.",
+        "books": "I love reading! I read a lot of biology and adventure books, but I also like some classics.",
+        "book": "I love reading! I read a lot of biology and adventure books, but I also like some classics.",
+        "mymy sister": "Mymy has a sisters. She says it like that, for some reason. It’s cute.",
+        "miku": "Oh, Hatsune Miku! Maya loves her! I don’t really get it, but hey, if it makes her happy.",
+        "hatsune miku": "Oh, Hatsune Miku! Maya loves her! I don’t really get it, but hey, if it makes her happy.",
+        "miku hatsune": "Oh, Hatsune Miku! Maya loves her! I don’t really get it, but hey, if it makes her happy.",
+        "cleo": "Cleo’s great! She’s the serious one, which, honestly, we need.",
+        "zoey": "Zoey’s cool. A little quiet, but when she talks, it’s usually something smart.",
+        "kiki": "Kiki? I like her, she's very adventourous! But her and Mymy can be a bit...much together.",
+        "yfke": "Yfke! She's interesting...I like her, but I sometimes worry too much about her...she does some stuff that makes me a bit worried.",
+        "ilse": "Ilse is very nice, she likes to bake a lot of cakes. I'll askk her to bake one for Maya's birthday.",
+        "roos": "Roos is my best friend! We are like twins. She's very chill.",
+        "henk": "Henk? I think I know him. He’s... something.",
+        "lesotho": "Oh, I’ve been there once or twice! It’s beautiful, the mountains especially.",
+        "south african": "Oh, I’m South African! Born and raised in the beautiful countryside.",
+        "africa": "Oh, I’m South African! Born and raised in the beautiful countryside.",
+        "african": "Oh, I’m South African! Born and raised in the beautiful countryside.",
+        "afrikaan": "Oh, I’m South African! Born and raised in the beautiful countryside.",
+        "afrikaans": "Oh, I’m South African! Born and raised in the beautiful countryside.",
+        "brainrot": "ts pmo icl idc sybau",
+        "brain rot": "ts pmo icl idc sybau",
+        "your band": "Running in the 60s! We play a mix of folk, eurobeat and whatever else we feel like.",
+        "running in the 60s": "That's my band! We have a concert next weekend, you can come if you like.",
+        "your band name": "Running in the 60s! We play a mix of folk, eurobeat and whatever else we feel like.",
     }
 
 while True:
@@ -351,11 +603,12 @@ while True:
         import re
 
     # Check for exact or approximate matches using regular expressions
-    if re.search(r'\b(kys|kill yourself)\b', normalized_input):
+    if re.search(r'\b(kys|kill yourself)\b', normalized_input, re.IGNORECASE):
         jump kys
-    elif re.search(r'\b(no parents|dead parents|orphan|nigger|hate niggers|niggers|hate you|cum|want to have sex|sex|masturbation|edge|edging|wanna fuck|want to fuck|masturbate |kaffir boetie|Kaffir|kaffer|kaffir|kafir|kaffre|kuffar| love nazis|masturbaiting)\b', normalized_input):
+    elif re.search(r'\b(no parents|dead parents|orphan|nigger|hate niggers|niggers|hate you|cum|want to have sex|sex|masturbation|edge|edging|wanna fuck|want to fuck|masturbate|kaffir boetie|kaffir|kaffer|kafir|kaffre|kuffar|love nazis|masturbating|faggot|fag|tranny|rape|raping|rapist|kill yourself|kys|suicide|gas the jews|hitler did nothing wrong|nazi|white power|heil hitler|pedo|pedophile|child porn|cp|incest|bestiality|zoophilia|genocide|ethnic cleansing|jihad|sharia law|infidel|chink|gook|spic|wetback|beaner|cuck|fuck you|die|moon cricket|porch monkey|jungle bunny|sand nigger|raghead|camel jockey)\b', normalized_input, re.IGNORECASE):
         jump kys1
-    # Match against the story keywords
+    elif re.search(r'\b(eiko is|eiko is mymys)\b', normalized_input, re.IGNORECASE):
+        jump no    
     elif any(keyword in normalized_input for keyword in story_keywords):
         $ matched_keyword = next((keyword for keyword in story_keywords if keyword in normalized_input), None)
         $ story = story_keywords[matched_keyword]
@@ -381,7 +634,7 @@ label chess_game:
     $ depth = None
     $ fen = STARTING_FEN
     $ global_objects['STOCKFISH_ENGINE'] = chess.engine.SimpleEngine.popen_uci(STOCKFISH, startupinfo=STARTUPINFO)
-    $ depth = 6
+    $ depth = 4
     scene coco with dissolve
     coco "Ok! Great, what colour do you want to be?"
     menu:
@@ -425,6 +678,7 @@ label chess_game_setup:
     window show
 
     if _return == DRAW:
+        scene chappy
         coco "A draw! We both played well, but if I’m being honest, you were a bit better."
     else: # RESIGN or CHECKMATE
         $ winner = "White" if _return == chess.WHITE else "Black"
@@ -487,4 +741,13 @@ label kys1:
     pause 2
     scene black with fade
     pause 1.0
+    $ renpy.quit()
+
+label no:
+    scene shocked
+    coco "What? Mymy has a sister? I need to ask her about that...{p=0.8}{nw} "
+    stop music
+    scene black
+    pause 2.0
+    "No one is supposed to know about that..."
     $ renpy.quit()
